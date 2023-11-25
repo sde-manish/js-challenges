@@ -1,3 +1,6 @@
-function helloWorld() {}
+function getSum(a, b) {
+    sum = a + b;
+    return sum
+}
 
-module.exports = helloWorld;
+module.exports = getSum;
