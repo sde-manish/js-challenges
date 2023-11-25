@@ -1,12 +1,14 @@
-function isPalindrome(inputStr) {
-    let revStr =  inputStr.split("").reverse().join("");
-    if (inputStr === revStr) {
-         return true
-    } else {
-     return false
-    }
+function reverseString(str) {
      
- }
- 
- module.exports = isPalindrome;
- 
+     // first solution
+     // let revStr = "";
+     // for (let i = str.length -1; i >= 0; i--) {
+     //      revStr += str[i]
+     // }
+     // return revStr
+
+     return str.split("").reverse().join("")
+
+   }
+   
+   module.exports = reverseString;

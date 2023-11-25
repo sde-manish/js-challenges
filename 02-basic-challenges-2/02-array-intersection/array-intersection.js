@@ -1,18 +1,12 @@
-function fizzBuzzArray(num) {
-    let tempArr = []
-    for (let i = 1; i <= num ; i++) {
-        if (i % 3 === 0 && i % 5 === 0 ) {
-            tempArr.push("FizzBuzz");      
-        } else if (i % 3 === 0) {
-            tempArr.push("Fizz");
-        } else if (i % 5 === 0) {
-            tempArr.push("Buzz")
-        } else {
-            tempArr.push(i)
-        }
-        
+function arrayIntersection(arr1, arr2){
+const intersection = [];
+
+for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i]) && !intersection.includes(arr1[i])) {
+        intersection.push(arr1[i])
     }
-    return tempArr
+}
+return intersection
 }
 
-module.exports = fizzBuzzArray;
+module.exports = arrayIntersection;

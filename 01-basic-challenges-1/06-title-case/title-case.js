@@ -7,7 +7,7 @@ function titleCase(string) {
     }
     let finalText = temp.join(' ')
 
-    console.log(finalText);
+    return finalText
 }
 
 module.exports = titleCase;
