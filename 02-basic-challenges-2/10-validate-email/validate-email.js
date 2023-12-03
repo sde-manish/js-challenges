@@ -1,5 +1,9 @@
 function validateEmail(emailStr) {
 
+
+    const emailPattern = /^[a-zA-Z0-9._-%+]+@[a-zA-Z0-9.-]+\.[a-zAZ]{2,4}$/
+    return emailPattern.test(emailStr)
+
 /*    emailStrArr = emailStr.split("")
     if (emailStrArr.includes("@") && emailStrArr.includes(".")) {
         return true
@@ -12,30 +16,32 @@ The above solutiom i s not correct. */
 
 
 // Second correct solution
-if (emailStr.indexOf('@') === -1 || emailStr.indexOf('.') === -1) {
-    return false;
-  }
+// if (emailStr.indexOf('@') === -1 || emailStr.indexOf('.') === -1) {
+//     return false;
+//   }
   
-const inputStrArr = emailStr.split("@");
-const firstPart = inputStrArr[0]
-const secondPart = inputStrArr[1]
+// const inputStrArr = emailStr.split("@");
+// const firstPart = inputStrArr[0]
+// const secondPart = inputStrArr[1]
 
 
-if (firstPart.length < 2 || secondPart.length < 3 ) {
-    return false;
-}
+// if (firstPart.length < 2 || secondPart.length < 3 ) {
+//     return false;
+// }
 
-const domainExtensionArr = secondPart.split(".")
+// const domainExtensionArr = secondPart.split(".")
 
 
-const domain  = domainExtensionArr[0]
-const extension = domainExtensionArr[1]
-if (domain.length < 2 || extension.length < 3) {
-    return false
-}
+// const domain  = domainExtensionArr[0]
+// const extension = domainExtensionArr[1]
+// if (domain.length < 2 || extension.length < 3) {
+//     return false
+// }
 
-return true
-}
+// return true
+
+
+
 //  Another way to write this solution
 // function validateEmail(email) {
 //     if (email.indexOf('@') === -1) {
@@ -57,6 +63,7 @@ return true
 //     }
   
 //     return true;
-//   }
+
+}
 
 module.exports = validateEmail;
